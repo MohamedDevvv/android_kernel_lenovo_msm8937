@@ -101,3 +101,22 @@ all.config
 
 # fetched Android config fragments
 android/configs/android-*.cfg
+<<<<<<< HEAD
+||||||| parent of a8066f50f85d (:sparkles: Introducing prima-updater)
+
+# Binares
+ipa_common
+
+# out dir
+out/
+=======
+
+# Binares
+ipa_common
+
+# out dir
+out/
+
+# rejected patches
+.rej
+>>>>>>> a8066f50f85d (:sparkles: Introducing prima-updater)
