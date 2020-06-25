@@ -25,4 +25,16 @@ obj-$(CONFIG_SCHED_AUTOGROUP) += auto_group.o
 obj-$(CONFIG_SCHEDSTATS) += stats.o
 obj-$(CONFIG_SCHED_DEBUG) += debug.o
 obj-$(CONFIG_CGROUP_CPUACCT) += cpuacct.o
+<<<<<<< HEAD
 obj-$(CONFIG_SCHED_CORE_CTL) += core_ctl.o
+||||||| parent of 47b007008344 (Increased Readahead and some more cleaning)
+obj-$(CONFIG_CPU_FREQ) += cpufreq.o
+obj-$(CONFIG_CPU_FREQ_GOV_SCHEDUTIL) += cpufreq_schedutil.o
+obj-y += boost.o
+=======
+obj-$(CONFIG_CPU_FREQ) += cpufreq.o
+obj-$(CONFIG_CPU_FREQ_GOV_SCHEDUTIL) += cpufreq_schedutil.o
+obj-y += boost.o
+
+
+>>>>>>> 47b007008344 (Increased Readahead and some more cleaning)
