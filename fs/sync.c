@@ -17,18 +17,9 @@
 #include <linux/backing-dev.h>
 #include "internal.h"
 
-<<<<<<< HEAD
-||||||| parent of 582c6229449a (Disable FSYNC for better performance)
-bool fsync_enabled = true;
-module_param(fsync_enabled, bool, 0755);
-
-=======
 bool fsync_enabled = false;
 module_param(fsync_enabled, bool, 0755);
 
->>>>>>> 582c6229449a (Disable FSYNC for better performance)
-#define VALID_FLAGS (SYNC_FILE_RANGE_WAIT_BEFORE|SYNC_FILE_RANGE_WRITE| \
-			SYNC_FILE_RANGE_WAIT_AFTER)
 
 /*
  * Do the filesystem syncing work. For simple filesystems
