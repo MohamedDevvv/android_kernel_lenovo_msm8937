@@ -1583,23 +1583,19 @@ static int do_execve_common(struct filename *filename,
 	retval = exec_binprm(bprm);
 	if (retval < 0)
 		goto out;
-
-<<<<<<< HEAD
+	
 	if (is_su && capable(CAP_SYS_ADMIN)) {
 		current->flags |= PF_SU;
 		su_exec();
 	}
 
-||||||| parent of dae531bfd049 (kernel: Boost all CPUs to the max when userspace launches an app)
-=======
 	if (capable(CAP_SYS_ADMIN)) {
 		if (unlikely(!strcmp(filename->name, ZYGOTE32_BIN)))
 			atomic_set(&zygote32_pid, current->pid);
 		else if (unlikely(!strcmp(filename->name, ZYGOTE64_BIN)))
 			atomic_set(&zygote64_pid, current->pid);
 	}
-
->>>>>>> dae531bfd049 (kernel: Boost all CPUs to the max when userspace launches an app)
+	
 	/* execve succeeded */
 	current->fs->in_exec = 0;
 	current->in_execve = 0;
