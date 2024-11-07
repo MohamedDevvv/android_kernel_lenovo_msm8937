@@ -17,10 +17,6 @@
 #include <linux/backing-dev.h>
 #include "internal.h"
 
-bool fsync_enabled = false;
-module_param(fsync_enabled, bool, 0755);
-
-
 /*
  * Do the filesystem syncing work. For simple filesystems
  * writeback_inodes_sb(sb) just dirties buffers with inodes so we have to
