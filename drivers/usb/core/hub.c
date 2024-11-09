@@ -2270,6 +2270,7 @@ static int usb_enumerate_device_otg(struct usb_device *udev)
 		unsigned			port1 = udev->portnum;
 
 		/* descriptor may appear anywhere in config */
+<<<<<<< HEAD
 		err = __usb_get_extra_descriptor(udev->rawdescriptors[0],
 				le16_to_cpu(udev->config[0].desc.wTotalLength),
 				USB_DT_OTG, (void **) &desc, sizeof(*desc));
@@ -2277,6 +2278,20 @@ static int usb_enumerate_device_otg(struct usb_device *udev)
 			return 0;
 		dev_info(&udev->dev, "Dual-Role OTG device on %sHNP port\n",
 					(port1 == bus->otg_port) ? "" : "non-");
+||||||| 0b69656e0919
+		if (__usb_get_extra_descriptor (udev->rawdescriptors[0],
+					le16_to_cpu(udev->config[0].desc.wTotalLength),
+					USB_DT_OTG, (void **) &desc) == 0) {
+			if (desc->bmAttributes & USB_OTG_HNP) {
+				unsigned		port1 = udev->portnum;
+=======
+		if (__usb_get_extra_descriptor (udev->rawdescriptors[0],
+					le16_to_cpu(udev->config[0].desc.wTotalLength),
+					USB_DT_OTG, (void **) &desc,
+					sizeof(*desc)) == 0) {
+			if (desc->bmAttributes & USB_OTG_HNP) {
+				unsigned		port1 = udev->portnum;
+>>>>>>> 7d64810bab3e21f2d96fec320e3f71ab3ddea59e
 
 		/* enable HNP before suspend, it's simpler */
 		if (port1 == bus->otg_port) {
