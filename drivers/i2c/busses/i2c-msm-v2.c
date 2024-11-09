@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 /* Copyright (c) 2014-2019, The Linux Foundation. All rights reserved.
+||||||| merged common ancestors
+/* Copyright (c) 2014-2017, The Linux Foundation. All rights reserved.
+=======
+/* Copyright (c) 2014-2018, The Linux Foundation. All rights reserved.
+>>>>>>> a5f3199c3d7940e68405c141c48533581680743f
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -2318,11 +2324,27 @@ i2c_msm_frmwrk_xfer(struct i2c_adapter *adap, struct i2c_msg msgs[], int num)
 	struct i2c_msm_ctrl      *ctrl = i2c_get_adapdata(adap);
 	struct i2c_msm_xfer      *xfer = &ctrl->xfer;
 
+<<<<<<< HEAD
 	if (IS_ERR_OR_NULL(msgs) || num < 1) {
 		dev_err(ctrl->dev,
 		"Error due to invalid message pointer or num of messages = %d\n",
 		num);
 		return -EINVAL;
+||||||| merged common ancestors
+	if (IS_ERR_OR_NULL(msgs)) {
+		dev_err(ctrl->dev, " error on msgs Accessing invalid  pointer location\n");
+		return PTR_ERR(msgs);
+=======
+	if (num < 1) {
+		dev_err(ctrl->dev,
+		"error on number of msgs(%d) received\n", num);
+		return -EINVAL;
+	}
+
+	if (IS_ERR_OR_NULL(msgs)) {
+		dev_err(ctrl->dev, " error on msgs Accessing invalid  pointer location\n");
+		return PTR_ERR(msgs);
+>>>>>>> a5f3199c3d7940e68405c141c48533581680743f
 	}
 
 	/* if system is suspended just bail out */
