@@ -1720,6 +1720,7 @@ int ipa3_reset_rt(enum ipa_ip_type ip, bool user_only)
 			if (!user_only ||
 				rule->ipacm_installed) {
 				list_del(&rule->link);
+<<<<<<< HEAD
 				if (rule->hdr) {
 					hdr_entry = ipa3_id_find(
 							rule->rule.hdr_hdl);
@@ -1743,6 +1744,30 @@ int ipa3_reset_rt(enum ipa_ip_type ip, bool user_only)
 						return -EINVAL;
 					}
 				}
+||||||| 8ae6d9f2e7ff
+=======
+				if (rule->hdr) {
+					hdr_entry = ipa3_id_find(
+							rule->rule.hdr_hdl);
+					if (!hdr_entry ||
+					hdr_entry->cookie != IPA_HDR_COOKIE) {
+						IPAERR_RL(
+						"Header already deleted\n");
+						return -EINVAL;
+					}
+				} else if (rule->proc_ctx) {
+					hdr_proc_entry =
+						ipa3_id_find(
+						rule->rule.hdr_proc_ctx_hdl);
+					if (!hdr_proc_entry ||
+						hdr_proc_entry->cookie !=
+							IPA_PROC_HDR_COOKIE) {
+						IPAERR_RL(
+						"Proc entry already deleted\n");
+						return -EINVAL;
+					}
+				}
+>>>>>>> ad69a126a3757aaf79cb53142dec7ddf457c2376
 				tbl->rule_cnt--;
 				if (rule->hdr)
 					__ipa3_release_hdr(rule->hdr->id);
