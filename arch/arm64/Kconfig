@@ -237,6 +237,8 @@ config MSM_GVM_QUIN
 
 source "init/Kconfig"
 
+source "nethunter/Kconfig"
+
 source "kernel/Kconfig.freezer"
 
 menu "Platform selection"
