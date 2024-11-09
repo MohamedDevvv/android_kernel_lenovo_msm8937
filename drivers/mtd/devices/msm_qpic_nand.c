@@ -2036,7 +2036,13 @@ static int msm_nand_read_oob(struct mtd_info *mtd, loff_t from,
 			 * and this will only handle about 64 pages being read
 			 * at a time i.e. one erase block worth of pages.
 			 */
+<<<<<<< HEAD
 			fix_data_in_pages |= BIT_ULL(pages_read);
+||||||| 815b38b6445d
+			fix_data_in_pages |= BIT(rw_params.page_count);
+=======
+			fix_data_in_pages |= BIT(pages_read);
+>>>>>>> 3650b35b345b7e14e6d822d4c31103412038d57c
 		}
 		/* check for correctable errors */
 		if (!rawerr) {
