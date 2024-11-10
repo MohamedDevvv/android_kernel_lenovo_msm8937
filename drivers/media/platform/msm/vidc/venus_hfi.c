@@ -3310,17 +3310,11 @@ static void __dump_venus_debug_registers(struct venus_hfi_device *device)
 static void print_sfr_message(struct venus_hfi_device *device)
 {
 	struct hfi_sfr_struct *vsfr = NULL;
-<<<<<<< HEAD
 	u32 vsfr_size = 0;
 	void *p = NULL;
 
-||||||| 233870be3b30
-
 	__set_state(device, VENUS_STATE_DEINIT);
 
-=======
-
->>>>>>> 8f397ec8a923a04912fd644b6195daf04efb86de
 	/* Once SYS_ERROR received from HW, it is safe to halt the AXI.
 	 * With SYS_ERROR, Venus FW may have crashed and HW might be
 	 * active and causing unnecessary transactions. Hence it is
