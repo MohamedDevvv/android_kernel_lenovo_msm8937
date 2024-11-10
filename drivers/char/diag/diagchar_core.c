@@ -1841,10 +1841,19 @@ static int diag_ioctl_lsm_deinit(void)
 		mutex_unlock(&driver->diagchar_mutex);
 		return -EINVAL;
 	}
+<<<<<<< HEAD
 	if (!(driver->data_ready[i] & DEINIT_TYPE)) {
 		driver->data_ready[i] |= DEINIT_TYPE;
 		atomic_inc(&driver->data_ready_notif[i]);
 	}
+||||||| 68ab5f46024e
+
+	driver->data_ready[i] |= DEINIT_TYPE;
+=======
+
+	driver->data_ready[i] |= DEINIT_TYPE;
+	atomic_inc(&driver->data_ready_notif[i]);
+>>>>>>> 8338cb54736192dbbac3e478932c717127e54cf7
 	mutex_unlock(&driver->diagchar_mutex);
 	wake_up_interruptible(&driver->wait_q);
 

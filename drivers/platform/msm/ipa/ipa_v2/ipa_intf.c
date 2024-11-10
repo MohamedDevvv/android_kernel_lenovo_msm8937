@@ -742,7 +742,7 @@ ssize_t ipa_read(struct file *filp, char __user *buf, size_t count,
 				break;
 			}
 			if (copy_to_user(buf, &msg->meta,
-					  sizeof(struct ipa_msg_meta))) {
+					sizeof(struct ipa_msg_meta))) {
 				kfree(msg);
 				msg = NULL;
 				ret = -EFAULT;
@@ -751,6 +751,7 @@ ssize_t ipa_read(struct file *filp, char __user *buf, size_t count,
 			buf += sizeof(struct ipa_msg_meta);
 			count -= sizeof(struct ipa_msg_meta);
 			if (msg->buff) {
+<<<<<<< HEAD
 				if (count >= msg->meta.msg_len) {
 					if (copy_to_user(buf, msg->buff,
 							  msg->meta.msg_len)) {
@@ -760,6 +761,20 @@ ssize_t ipa_read(struct file *filp, char __user *buf, size_t count,
 						break;
 					}
 				} else {
+||||||| 68ab5f46024e
+				if (copy_to_user(buf, msg->buff,
+						  msg->meta.msg_len)) {
+=======
+				if (count >= msg->meta.msg_len) {
+					if (copy_to_user(buf, msg->buff,
+							msg->meta.msg_len)) {
+						kfree(msg);
+						msg = NULL;
+						ret = -EFAULT;
+						break;
+					}
+				} else {
+>>>>>>> 8338cb54736192dbbac3e478932c717127e54cf7
 					kfree(msg);
 					msg = NULL;
 					ret = -EFAULT;
