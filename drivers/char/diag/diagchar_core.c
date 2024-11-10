@@ -3185,12 +3185,28 @@ exit:
 			pid_struct = find_get_pid(entry->tgid);
 			if (!pid_struct)
 				continue;
+<<<<<<< HEAD
 			task_s = get_pid_task(pid_struct, PIDTYPE_PID);
 			if (!task_s) {
 				DIAG_LOG(DIAG_DEBUG_DCI,
 				"diag: valid task doesn't exist for pid = %d\n",
 				entry->tgid);
 				put_pid(pid_struct);
+||||||| 003947b93c46
+			if (!entry->in_service)
+=======
+			task_s = get_pid_task(pid_struct, PIDTYPE_PID);
+			if (!task_s) {
+				DIAG_LOG(DIAG_DEBUG_DCI,
+				"diag: valid task doesn't exist for pid = %d\n",
+				entry->tgid);
+				continue;
+			}
+			if (task_s == entry->client)
+				if (entry->client->tgid != current->tgid)
+					continue;
+			if (!entry->in_service)
+>>>>>>> 6beed70aeec304e6cd38f78023d00b45f173fbb6
 				continue;
 			}
 			if (task_s == entry->client) {
