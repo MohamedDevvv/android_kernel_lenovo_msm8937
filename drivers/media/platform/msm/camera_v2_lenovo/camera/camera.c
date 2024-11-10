@@ -1,10 +1,6 @@
-<<<<<<< HEAD:drivers/media/platform/msm/camera_v2_lenovo/camera/camera.c
 /* Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
-||||||| 003947b93c46:drivers/media/platform/msm/ais/camera/camera.c
-/* Copyright (c) 2012-2018, The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2012-2018, 2019 The Linux Foundation. All rights reserved.
->>>>>>> 6beed70aeec304e6cd38f78023d00b45f173fbb6:drivers/media/platform/msm/ais/camera/camera.c
+ * Copyright (c) 2012-2018, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2012-2018, 2019 The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
