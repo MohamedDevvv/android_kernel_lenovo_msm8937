@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Copyright (c) 2014-2017, 2018-2019 The Linux Foundation. All rights reserved.
-||||||| 68ab5f46024e
 /* Copyright (c) 2014-2017, The Linux Foundation. All rights reserved.
-=======
 /* Copyright (c) 2014-2017, 2019 The Linux Foundation. All rights reserved.
->>>>>>> 8338cb54736192dbbac3e478932c717127e54cf7
-||||||| 233870be3b30
 /* Copyright (c) 2014-2017, 2019 The Linux Foundation. All rights reserved.
-=======
 /* Copyright (c) 2014-2017, 2018-2019 The Linux Foundation. All rights reserved.
->>>>>>> 8f397ec8a923a04912fd644b6195daf04efb86de
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -30,24 +22,18 @@
 #include <linux/mutex.h>
 #include <sound/audio_cal_utils.h>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 static DEFINE_MUTEX(destroy_cal_lock);
 
-||||||| 68ab5f46024e
-=======
 static int destroy_cal_lock_init;
 
 static struct mutex destroy_cal_lock;
-||||||| 233870be3b30
+
 static int destroy_cal_lock_init;
 
 static struct mutex destroy_cal_lock;
-=======
-static DEFINE_MUTEX(destroy_cal_lock);
->>>>>>> 8f397ec8a923a04912fd644b6195daf04efb86de
 
->>>>>>> 8338cb54736192dbbac3e478932c717127e54cf7
+static DEFINE_MUTEX(destroy_cal_lock);
+
 static int unmap_memory(struct cal_type_data *cal_type,
 			struct cal_block_data *cal_block);
 
