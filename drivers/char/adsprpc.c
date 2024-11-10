@@ -1168,6 +1168,7 @@ static int get_args(uint32_t kernel, struct smq_invoke_ctx *ctx)
 	/* allocate new buffer */
 	if (copylen) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 		err = fastrpc_buf_alloc(ctx->fl, copylen, ctx_attrs,
 					0, 0, &ctx->buf);
 ||||||| c9e9a631b93f
@@ -1175,6 +1176,11 @@ static int get_args(uint32_t kernel, struct smq_invoke_ctx *ctx)
 =======
 		DEFINE_DMA_ATTRS(ctx_attrs);
 
+||||||| 6beed70aeec3
+		DEFINE_DMA_ATTRS(ctx_attrs);
+
+=======
+>>>>>>> 60a8d8af3751b9dc22894fe68b3964ea94ae7888
 		err = fastrpc_buf_alloc(ctx->fl, copylen, ctx_attrs,
 					0, 0, &ctx->buf);
 >>>>>>> e91e51d0b4c0eaf64c04396d66bf2ed65df0123e
@@ -1213,9 +1219,17 @@ static int get_args(uint32_t kernel, struct smq_invoke_ctx *ctx)
 		rpra[i].buf.len = len;
 =======
 
+<<<<<<< HEAD
 		rpra[i].buf.pv = 0;
 		rpra[i].buf.len = len;
 >>>>>>> e91e51d0b4c0eaf64c04396d66bf2ed65df0123e
+||||||| 6beed70aeec3
+		rpra[i].buf.pv = 0;
+		rpra[i].buf.len = len;
+=======
+		rpra[i].buf.pv = lrpra[i].buf.pv = 0;
+		rpra[i].buf.len = lrpra[i].buf.len = len;
+>>>>>>> 60a8d8af3751b9dc22894fe68b3964ea94ae7888
 		if (!len)
 			continue;
 		if (map) {
