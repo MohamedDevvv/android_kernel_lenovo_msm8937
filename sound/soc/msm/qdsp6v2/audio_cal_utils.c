@@ -28,12 +28,6 @@ static int destroy_cal_lock_init;
 
 static struct mutex destroy_cal_lock;
 
-static int destroy_cal_lock_init;
-
-static struct mutex destroy_cal_lock;
-
-static DEFINE_MUTEX(destroy_cal_lock);
-
 static int unmap_memory(struct cal_type_data *cal_type,
 			struct cal_block_data *cal_block);
 
