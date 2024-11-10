@@ -1,10 +1,6 @@
-/* Copyright (c) 2015-2017, 2019 The Linux Foundation. All rights reserved.
-||||||| merged common ancestors
-/* Copyright (c) 2015-2017, The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2015-2018, The Linux Foundation. All rights reserved.
->>>>>>> a5f3199c3d7940e68405c141c48533581680743f
- *
+ /* Copyright (c) 2015-2017, 2019 The Linux Foundation. All rights reserved.
+ *  Copyright (c) 2015-2017, The Linux Foundation. All rights reserved.
+ *  Copyright (c) 2015-2018, The Linux Foundation. All rights reserved.
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
  * only version 2 as published by the Free Software Foundation.
