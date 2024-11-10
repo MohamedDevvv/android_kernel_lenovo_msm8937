@@ -1612,6 +1612,7 @@ static int32_t adm_callback(struct apr_client_data *data, void *priv)
 				pr_err("%s: ADM_CMDRSP_GET_PP_TOPO_MODULE_LIST",
 					 __func__);
 				pr_err(":err = 0x%x\n", payload[0]);
+<<<<<<< HEAD
 			} else if (data->payload_size >=
 				   (2 * sizeof(uint32_t))) {
 				if ((payload[1] >
@@ -1636,6 +1637,47 @@ static int32_t adm_callback(struct apr_client_data *data, void *priv)
 							 __func__, (i+1),
 							 payload[1+i]);
 					}
+||||||| 7e363b255da4
+			} else if (payload[1] >
+				   ((ADM_GET_TOPO_MODULE_LIST_LENGTH /
+				   sizeof(uint32_t)) - 1)) {
+				pr_err("%s: ADM_CMDRSP_GET_PP_TOPO_MODULE_LIST",
+					 __func__);
+				pr_err(":size = %d\n", payload[1]);
+			} else {
+				idx = ADM_GET_TOPO_MODULE_LIST_LENGTH *
+					copp_idx;
+				pr_debug("%s:Num modules payload[1] %d\n",
+					 __func__, payload[1]);
+				adm_module_topo_list[idx] = payload[1];
+				for (i = 1; i <= payload[1]; i++) {
+					adm_module_topo_list[idx+i] =
+						payload[1+i];
+					pr_debug("%s:payload[%d] = %x\n",
+						 __func__, (i+1), payload[1+i]);
+=======
+			} else if (data->payload_size >=
+				   (2 * sizeof(uint32_t))) {
+				if (payload[1] >
+					   ((ADM_GET_TOPO_MODULE_LIST_LENGTH /
+					   sizeof(uint32_t)) - 1)) {
+					pr_err("%s: ADM_CMDRSP_GET_PP_TOPO_MODULE_LIST",
+						 __func__);
+					pr_err(":size = %d\n", payload[1]);
+				} else {
+					idx = ADM_GET_TOPO_MODULE_LIST_LENGTH *
+						copp_idx;
+					pr_debug("%s:Num modules payload[1] %d\n",
+						 __func__, payload[1]);
+					adm_module_topo_list[idx] = payload[1];
+					for (i = 1; i <= payload[1]; i++) {
+						adm_module_topo_list[idx+i] =
+							payload[1+i];
+						pr_debug("%s:payload[%d] = %x\n",
+							 __func__, (i+1),
+							 payload[1+i]);
+					}
+>>>>>>> 93677967d14ce62a876b7ef658e0a4a046a2239d
 				}
 			} else
 				pr_err("%s: Invalid payload size %d\n",
