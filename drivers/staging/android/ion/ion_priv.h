@@ -579,16 +579,12 @@ int ion_walk_heaps(struct ion_client *client, int heap_id,
 			enum ion_heap_type type, void *data,
 			int (*f)(struct ion_heap *heap, void *data));
 
-<<<<<<< HEAD
 struct ion_handle *ion_handle_get_by_id_nolock(struct ion_client *client,
 						int id);
-||||||| merged common ancestors
 struct ion_handle *ion_handle_get_by_id(struct ion_client *client,
 					int id);
-=======
 struct ion_handle *ion_handle_get_by_id_nolock(struct ion_client *client,
 					       int id);
->>>>>>> a5f3199c3d7940e68405c141c48533581680743f
 
 int ion_handle_put(struct ion_handle *handle);
 
