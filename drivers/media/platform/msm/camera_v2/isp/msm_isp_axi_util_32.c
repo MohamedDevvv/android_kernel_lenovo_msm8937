@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 /* Copyright (c) 2013-2019, The Linux Foundation. All rights reserved.
-||||||| c9e9a631b93f
-/* Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2013-2018, The Linux Foundation. All rights reserved.
->>>>>>> e91e51d0b4c0eaf64c04396d66bf2ed65df0123e
+ * Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2013-2018, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
