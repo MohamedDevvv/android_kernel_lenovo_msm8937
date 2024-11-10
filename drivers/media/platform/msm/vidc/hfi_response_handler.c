@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 /* Copyright (c) 2012-2017,2019 The Linux Foundation. All rights reserved.
-||||||| 68ab5f46024e
-/* Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2012-2016, 2019 The Linux Foundation. All rights reserved.
->>>>>>> 8338cb54736192dbbac3e478932c717127e54cf7
-||||||| 233870be3b30
-/* Copyright (c) 2012-2016, 2019 The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2012-2019, The Linux Foundation. All rights reserved.
->>>>>>> 8f397ec8a923a04912fd644b6195daf04efb86de
+ * Copyright (c) 2012-2017, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2012-2016, 2019 The Linux Foundation. All rights reserved.
+ * Copyright (c) 2012-2016, 2019 The Linux Foundation. All rights reserved.
+ * Copyright (c) 2012-2019, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
