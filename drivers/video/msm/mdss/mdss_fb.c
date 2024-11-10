@@ -2077,12 +2077,18 @@ static int mdss_fb_blank_blank(struct msm_fb_data_type *mfd,
 	if (ret) {
 		mfd->panel_power_state = cur_power_state;
 <<<<<<< HEAD
+<<<<<<< HEAD
 	} else if (!mdss_panel_is_power_on_interactive(req_power_state)) {
 ||||||| 815b38b6445d
 	else if (mdss_panel_is_power_off(req_power_state))
 =======
 	else if (!mdss_panel_is_power_on_interactive(req_power_state))
 >>>>>>> 3650b35b345b7e14e6d822d4c31103412038d57c
+||||||| 233870be3b30
+	else if (!mdss_panel_is_power_on_interactive(req_power_state))
+=======
+	} else if (!mdss_panel_is_power_on_interactive(req_power_state)) {
+>>>>>>> 8f397ec8a923a04912fd644b6195daf04efb86de
 		mdss_fb_release_fences(mfd);
 		if (mfd->panel.type == MIPI_CMD_PANEL)
 			mdss_fb_signal_retire_fence(mfd);

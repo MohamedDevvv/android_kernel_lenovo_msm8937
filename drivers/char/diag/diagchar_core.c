@@ -1842,6 +1842,7 @@ static int diag_ioctl_lsm_deinit(void)
 		return -EINVAL;
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 	if (!(driver->data_ready[i] & DEINIT_TYPE)) {
 		driver->data_ready[i] |= DEINIT_TYPE;
 		atomic_inc(&driver->data_ready_notif[i]);
@@ -1854,6 +1855,16 @@ static int diag_ioctl_lsm_deinit(void)
 	driver->data_ready[i] |= DEINIT_TYPE;
 	atomic_inc(&driver->data_ready_notif[i]);
 >>>>>>> 8338cb54736192dbbac3e478932c717127e54cf7
+||||||| 233870be3b30
+
+	driver->data_ready[i] |= DEINIT_TYPE;
+	atomic_inc(&driver->data_ready_notif[i]);
+=======
+	if (!(driver->data_ready[i] & DEINIT_TYPE)) {
+		driver->data_ready[i] |= DEINIT_TYPE;
+		atomic_inc(&driver->data_ready_notif[i]);
+	}
+>>>>>>> 8f397ec8a923a04912fd644b6195daf04efb86de
 	mutex_unlock(&driver->diagchar_mutex);
 	wake_up_interruptible(&driver->wait_q);
 

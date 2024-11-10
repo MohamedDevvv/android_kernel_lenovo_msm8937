@@ -210,6 +210,7 @@ int diag_md_write(int id, unsigned char *buf, int len, int ctx)
 
 		found = 1;
 <<<<<<< HEAD
+<<<<<<< HEAD
 		if (!(driver->data_ready[i] & USER_SPACE_DATA_TYPE)) {
 			driver->data_ready[i] |= USER_SPACE_DATA_TYPE;
 			atomic_inc(&driver->data_ready_notif[i]);
@@ -220,6 +221,15 @@ int diag_md_write(int id, unsigned char *buf, int len, int ctx)
 		driver->data_ready[i] |= USER_SPACE_DATA_TYPE;
 		atomic_inc(&driver->data_ready_notif[i]);
 >>>>>>> 8338cb54736192dbbac3e478932c717127e54cf7
+||||||| 233870be3b30
+		driver->data_ready[i] |= USER_SPACE_DATA_TYPE;
+		atomic_inc(&driver->data_ready_notif[i]);
+=======
+		if (!(driver->data_ready[i] & USER_SPACE_DATA_TYPE)) {
+			driver->data_ready[i] |= USER_SPACE_DATA_TYPE;
+			atomic_inc(&driver->data_ready_notif[i]);
+		}
+>>>>>>> 8f397ec8a923a04912fd644b6195daf04efb86de
 		pr_debug("diag: wake up logging process\n");
 		wake_up_interruptible(&driver->wait_q);
 	}

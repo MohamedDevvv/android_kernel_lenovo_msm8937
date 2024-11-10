@@ -1929,6 +1929,7 @@ static int32_t q6asm_callback(struct apr_client_data *data, void *priv)
 				return -EINVAL;
 			}
 			spin_lock_irqsave(&port->dsp_lock, dsp_flags);
+<<<<<<< HEAD
 			if (data->token < 0 ||
 					data->token >= port->max_buf_cnt) {
 				pr_debug("%s: Invalid token buffer index %u\n",
@@ -1946,12 +1947,36 @@ static int32_t q6asm_callback(struct apr_client_data *data, void *priv)
 				msm_audio_populate_upper_32_bits(
 					port->buf[data->token].phys) !=
 						payload[1])) {
+||||||| 233870be3b30
+			if (lower_32_bits(port->buf[data->token].phys) !=
+			payload[0] ||
+			msm_audio_populate_upper_32_bits(
+				port->buf[data->token].phys) !=	payload[1]) {
+=======
+			if (data->token < 0 ||
+					data->token >= port->max_buf_cnt) {
+				pr_debug("%s: Invalid token buffer index %u\n",
+					__func__, data->token);
+				spin_unlock_irqrestore(&port->dsp_lock,
+						dsp_flags);
+				spin_unlock_irqrestore(
+					&(session[session_id].session_lock),
+					flags);
+				return -EINVAL;
+			}
+			if (data->payload_size >= 2 * sizeof(uint32_t) &&
+				(lower_32_bits(port->buf[data->token].phys) !=
+				payload[0] ||
+				msm_audio_populate_upper_32_bits(
+					port->buf[data->token].phys) !=
+						payload[1])) {
+>>>>>>> 8f397ec8a923a04912fd644b6195daf04efb86de
 				pr_debug("%s: Expected addr %pK\n",
-				__func__, &port->buf[data->token].phys);
+					__func__, &port->buf[data->token].phys);
 				pr_err("%s: rxedl[0x%x] rxedu [0x%x]\n",
 					__func__, payload[0], payload[1]);
 				spin_unlock_irqrestore(&port->dsp_lock,
-								dsp_flags);
+						dsp_flags);
 				spin_unlock_irqrestore(
 					&(session[session_id].session_lock),
 					flags);
