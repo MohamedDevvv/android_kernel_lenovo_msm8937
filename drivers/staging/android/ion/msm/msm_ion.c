@@ -726,14 +726,10 @@ long msm_ion_custom_ioctl(struct ion_client *client,
 
 		lock_client(client);
 		if (data.flush_data.handle > 0) {
-<<<<<<< HEAD
 			handle = ion_handle_get_by_id_nolock(client,
-||||||| merged common ancestors
 			handle = ion_handle_get_by_id(client,
-=======
 			mutex_lock(&client->lock);
 			handle = ion_handle_get_by_id_nolock(client,
->>>>>>> a5f3199c3d7940e68405c141c48533581680743f
 						(int)data.flush_data.handle);
 			if (IS_ERR(handle)) {
 				mutex_unlock(&client->lock);
