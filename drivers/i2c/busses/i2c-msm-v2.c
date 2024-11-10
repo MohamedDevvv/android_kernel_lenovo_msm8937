@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 /* Copyright (c) 2014-2019, The Linux Foundation. All rights reserved.
-||||||| merged common ancestors
-/* Copyright (c) 2014-2017, The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2014-2018, The Linux Foundation. All rights reserved.
->>>>>>> a5f3199c3d7940e68405c141c48533581680743f
+ * Copyright (c) 2014-2017, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2014-2018, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -16,6 +12,7 @@
  * GNU General Public License for more details.
  *
  */
+
 /*
  * I2C controller driver for Qualcomm Technologies Inc platforms
  */
