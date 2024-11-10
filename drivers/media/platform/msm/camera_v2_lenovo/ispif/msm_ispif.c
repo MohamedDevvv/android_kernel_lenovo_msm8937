@@ -1,10 +1,6 @@
-<<<<<<< HEAD:drivers/media/platform/msm/camera_v2_lenovo/ispif/msm_ispif.c
 /* Copyright (c) 2013-2016, The Linux Foundation. All rights reserved.
-||||||| 68ab5f46024e:drivers/media/platform/msm/ais/ispif/msm_ispif.c
-/* Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
-=======
-/* Copyright (c) 2013-2019, The Linux Foundation. All rights reserved.
->>>>>>> 8338cb54736192dbbac3e478932c717127e54cf7:drivers/media/platform/msm/ais/ispif/msm_ispif.c
+ * Copyright (c) 2013-2017, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2013-2019, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
