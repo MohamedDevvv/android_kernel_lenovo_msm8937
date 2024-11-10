@@ -420,16 +420,12 @@ static struct ion_handle *ion_handle_lookup(struct ion_client *client,
 	return ERR_PTR(-EINVAL);
 }
 
-<<<<<<< HEAD
 struct ion_handle *ion_handle_get_by_id_nolock(struct ion_client *client,
 						int id)
-||||||| merged common ancestors
 static struct ion_handle *ion_handle_get_by_id_nolock(struct ion_client *client,
 						int id)
-=======
 struct ion_handle *ion_handle_get_by_id_nolock(struct ion_client *client,
 					       int id)
->>>>>>> a5f3199c3d7940e68405c141c48533581680743f
 {
 	struct ion_handle *handle;
 
