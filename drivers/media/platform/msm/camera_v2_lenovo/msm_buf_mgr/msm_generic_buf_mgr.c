@@ -564,16 +564,12 @@ static long msm_buf_mngr_subdev_ioctl(struct v4l2_subdev *sd,
 				}
 				k_ioctl.ioctl_ptr = (uintptr_t)&buf_info;
 			}
-<<<<<<< HEAD:drivers/media/platform/msm/camera_v2_lenovo/msm_buf_mgr/msm_generic_buf_mgr.c
 			k_ioctl.ioctl_ptr = (uintptr_t)&buf_info;
 			argp = &k_ioctl;
-||||||| 8ae6d9f2e7ff:drivers/media/platform/msm/ais/msm_buf_mgr/msm_generic_buf_mgr.c
 			k_ioctl.ioctl_ptr = (uintptr_t)&buf_info;
 
 			argp = &k_ioctl;
-=======
 			argp = (void *)&k_ioctl;
->>>>>>> ad69a126a3757aaf79cb53142dec7ddf457c2376:drivers/media/platform/msm/ais/msm_buf_mgr/msm_generic_buf_mgr.c
 			rc = msm_cam_buf_mgr_ops(cmd, argp);
 			}
 			break;
