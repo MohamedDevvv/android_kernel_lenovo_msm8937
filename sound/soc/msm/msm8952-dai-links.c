@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Copyright (c) 2015-2017, 2019 The Linux Foundation. All rights reserved.
 ||||||| merged common ancestors
 /* Copyright (c) 2015-2017, The Linux Foundation. All rights reserved.
