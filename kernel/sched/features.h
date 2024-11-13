@@ -39,15 +39,8 @@ SCHED_FEAT(WAKEUP_PREEMPTION, true)
 /*
  * Use arch dependent cpu capacity functions
  */
-<<<<<<< HEAD
-SCHED_FEAT(ARCH_CAPACITY, false)
-||||||| parent of 6328a30a3537 (kernel: Add ARCH_POWER and enable it)
 SCHED_FEAT(ARCH_CAPACITY, true)
-=======
 SCHED_FEAT(ARCH_POWER, true)
-SCHED_FEAT(ARCH_CAPACITY, true)
->>>>>>> 6328a30a3537 (kernel: Add ARCH_POWER and enable it)
-
 SCHED_FEAT(HRTICK, false)
 SCHED_FEAT(DOUBLE_TICK, false)
 SCHED_FEAT(LB_BIAS, true)
