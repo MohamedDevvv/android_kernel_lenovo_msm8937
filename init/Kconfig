@@ -1287,21 +1287,6 @@ config NET_NS
 
 endif # NAMESPACES
 
-<<<<<<< HEAD
-||||||| parent of cd64f4fceeb6 (sched/cass: Introduce the Capacity Aware Superset Scheduler)
-config CHECKPOINT_RESTORE
-	bool "Checkpoint/restore support"
-	select PROC_CHILDREN
-	default n
-	help
-	  Enables additional kernel features in a sake of checkpoint/restore.
-	  In particular it adds auxiliary prctl codes to setup process text,
-	  data and heap segment sizes, and a few additional /proc filesystem
-	  entries.
-
-	  If unsure, say N here.
-
-=======
 config CHECKPOINT_RESTORE
 	bool "Checkpoint/restore support"
 	select PROC_CHILDREN
@@ -1339,7 +1324,6 @@ config SCHED_CASS
 	  their lowest P-state necessary to satisfy the overall load at any
 	  given moment.
 
->>>>>>> cd64f4fceeb6 (sched/cass: Introduce the Capacity Aware Superset Scheduler)
 config SCHED_AUTOGROUP
 	bool "Automatic process group scheduling"
 	select CGROUPS
