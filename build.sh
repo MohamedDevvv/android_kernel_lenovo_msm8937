@@ -18,14 +18,9 @@ cdir() {
 		err "The directory $1 doesn't exists !"
 }
 
-
-## clone Kernel
-echo "Cloning Kernel"
-git clone https://github.com/MohamedDevvv/android_kernel_lenovo_msm8937 -b hybris-18.1 kernel
-
 ##------------------------------------------------------##
 ##----------Basic Informations, COMPULSORY-------- The defult directory where the kernel should be placed
-KERNEL_DIR=$(pwd)/kernel
+KERNEL_DIR=$(pwd)/android-kernel-lenovo-msm8937
 cd $KERNEL_DIR
 
 # The name of the device for which the kernel is built
